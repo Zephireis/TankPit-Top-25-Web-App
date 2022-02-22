@@ -210,8 +210,9 @@ app.get("/", function (req, resp) { // this is getting the root directory when a
 });
 
 
-app.listen(3000, function(){
-  console.log("server started on port 3000");
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
 });
 
 
