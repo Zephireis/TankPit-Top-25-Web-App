@@ -160,43 +160,43 @@ app.get("/", function (req, resp) { // this is getting the root directory when a
 //         con.query("SELECT * FROM overall", function (err, result, fields) {
 //           if (err) throw err;
           // console.log(result[1]);
-          baseData = result
-          console.log(baseData.length)
-          const color = {
-            red:"/images/redtank.png",
-            blue:"/images/bluetank.png",
-            purple:"/images/purpletank.png",
-            orange:"/images/orangetank.png",
-          }
+//           baseData = result
+//           console.log(baseData.length)
+//           const color = {
+//             red:"/images/redtank.png",
+//             blue:"/images/bluetank.png",
+//             purple:"/images/purpletank.png",
+//             orange:"/images/orangetank.png",
+//           }
 
-          const textColor = {
-            red: "#FF0000",
-            blue: "#007EE4",
-            orange: "#FFA500",
-            purple: "#A020F0",
+//           const textColor = {
+//             red: "#FF0000",
+//             blue: "#007EE4",
+//             orange: "#FFA500",
+//             purple: "#A020F0",
 
-          }
+//           }
 
 
 
-          for (var i=0; i < baseData.length; i++) {
-            sqlKills.push(baseData[i].destroyed_enemies)
-            sqlDeaths.push(baseData[i].deactivated)
-            sqlTime.push(baseData[i].time_played)
-            sqlAwards.push(baseData[i].awards)
-            sqlColor.push(baseData[i].main_color)
+//           for (var i=0; i < baseData.length; i++) {
+//             sqlKills.push(baseData[i].destroyed_enemies)
+//             sqlDeaths.push(baseData[i].deactivated)
+//             sqlTime.push(baseData[i].time_played)
+//             sqlAwards.push(baseData[i].awards)
+//             sqlColor.push(baseData[i].main_color)
             
             
-          }
+//           }
           
-          for (var i=0; i <tankNames.length; i++){
-            // console.log(sqlColor[i]) //getting each color of all the tanks in the array
-            imgLinks.push(color[sqlColor[i]])// i should start with orange
-            // console.log(color[sqlColor[i]])
-            fontColor.push(textColor[sqlColor[i]])
-            console.log(textColor[sqlColor[i]])
+//           for (var i=0; i <tankNames.length; i++){
+//             // console.log(sqlColor[i]) //getting each color of all the tanks in the array
+//             imgLinks.push(color[sqlColor[i]])// i should start with orange
+//             // console.log(color[sqlColor[i]])
+//             fontColor.push(textColor[sqlColor[i]])
+//             console.log(textColor[sqlColor[i]])
 
-          }
+//           }
 
            //getting the attibute red of the object colors
 
