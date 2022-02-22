@@ -149,16 +149,16 @@ app.get("/", function (req, resp) { // this is getting the root directory when a
         tankID.push(top25.results[i].tank_id)
         wholeData.push(top25.results) //for length        
       };
-      var con = mysql.createConnection({
-        host: "s1.swapdns.com",
-        user: "division_master",
-        password: "!Ght567hkl",
-        database: "division_tpwebstats"
-      });
-      con.connect(function(err) {
-        if (err) throw err;
-        con.query("SELECT * FROM overall", function (err, result, fields) {
-          if (err) throw err;
+//       var con = mysql.createConnection({
+//         host: "s1.swapdns.com",
+//         user: "division_master",
+//         password: "!Ght567hkl",
+//         database: "division_tpwebstats"
+//       });
+//       con.connect(function(err) {
+//         if (err) throw err;
+//         con.query("SELECT * FROM overall", function (err, result, fields) {
+//           if (err) throw err;
           // console.log(result[1]);
           baseData = result
           console.log(baseData.length)
