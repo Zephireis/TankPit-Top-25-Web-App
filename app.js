@@ -210,6 +210,7 @@ app.get("/", function (req, resp) { // this is getting the root directory when a
 });
 
 
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
