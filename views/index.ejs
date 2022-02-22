@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+ 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TankPit Stats</title>
+</head>
+<body>
+    <header>
+        <div id="headbanner">
+            <p>TANKPIT STATS</p>
+          
+        </div>
+    </header>
+
+
+<section id="main">
+    <hr class="seperator">
+    <div id="profile-container">
+
+        <!-- using ejs language to generate the div top players card div length based off of the names length  -->
+        <%for (var i=0; i <name.length; i++) { %>
+        <div class="top-players">
+            <div class="card-top">
+                <div class="iicon"></div>
+                <p id="name" style="color:<%=fontColor[i]%>"><img class="pfp" src="<%=tankcolor[i]%>" alt="">    <%=data1[i]%> #<%=data3[i]%></p>
+                <div id="awards"><%=awards[i]%></div>
+            </div>
+            <div class="card-bottom">
+                <div id="rank">Active Rank: <span class="datatext"><%=data2[i].toUpperCase()%></span></div>
+                <div id="kills">Destroyed Enemies: <span class="datatext"><%=kills[i]%></span></div>
+                <div id="deactivations">Deactivationss: <span class="datatext"><%=deaths[i]%></span></div>
+                <div id="time-played">Time Played: <span class="datatext"><%=time[i]%></span></div>
+                
+                
+            </div>
+        </div>
+        <% } %>
+
+
+   
+</section>
+<footer>
+    <hr class="seperator2">
+    <div class="foot">
+        <p>.</p>
+    </div>
+</footer>
+
+    
+</body>
+</html>
